@@ -23,7 +23,7 @@ and
 $ docker-compose run app iex -S mix
 ```
 
-to get a console.
+to get a console. Further instructions within.
 
-The included PostgreSQL binds locally at port 5432 - if you have trouble there, something else might be running already.
+The included PostgreSQL __binds locally at port 5432__ - if you have trouble there, something else might be running already.
 
