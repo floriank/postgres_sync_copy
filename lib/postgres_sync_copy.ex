@@ -4,15 +4,18 @@ defmodule PostgresSyncCopy do
   """
 
   @doc """
-  Hello world.
+  execute/0 will just call the example code from the blog post
+
+  If everything is fine, it should just end in :ok
 
   ## Examples
 
-      iex> PostgresSyncCopy.hello()
-      :world
+      iex> PostgresSyncCopy.execute()
+      :ok
 
   """
-  def hello do
-    :world
+  def execute do
+    Combiner.combine()
+    :ok
   end
 end

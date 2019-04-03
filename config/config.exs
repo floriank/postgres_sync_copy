@@ -21,6 +21,15 @@ use Mix.Config
 #     config :logger, level: :info
 #
 
+config :postgres_sync_copy, ecto_repos: [PostgresSyncCopy.Repo]
+
+config :postgres_sync_copy, PostgresSyncCopy.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: System.get_env("POSTGRES_USER"),
+  password: System.get_env("POSTGRES_PASSWORD"),
+  database: System.get_env("POSTGRES_DB"),
+  hostname: System.get_env("POSTGRES_HOST")
+
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment
 # by uncommenting the line below and defining dev.exs, test.exs and such.
